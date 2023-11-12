@@ -1,4 +1,4 @@
-package SingleCatchBlock;
+package CatchBlock;
 
 import java.io.*;
 
