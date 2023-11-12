@@ -4,22 +4,15 @@ import java.io.*;
 
 public class ExcepTest {
     public static void main(String args[]) {
-        try {
         int a[] = new int[2];
+        try {
         System.out.println("Access element three :" + a[3]);
         } catch (ArrayIndexOutOfBoundsException e) {
         System.out.println("Exception thrown :" + e);
+        }finally {
+        a[0] = 6;
+        System.out.println("First element value: " + a[0]);
+        System.out.println("The finally statement is executed");
         }
-        System.out.println("Out of the block");
-        try {
-                file = new FileInputStream(fileName);
-                x = (byte) file.read();
-            } catch (IOException i) {
-                i.printStackTrace();
-                return -1;
-            } catch (FileNotFoundException f) { // Not valid! 
-                f.printStackTrace();
-                return -1;
-            }
     }
 }
